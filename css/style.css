@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,600;1,700;1,800&display=swap');
+
+:root{
+  --main-color: rgba(142, 68, 173,1.0);
+  --main-color-light: rgb(253, 0, 241);
+  --accent-color: white;
+  --accent-color-light: white;
+}
+
+*{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+}
+
+.header , .todo-form{
+  color: var(--accent-color);
+  margin: .5rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.main-title{
+  font-size: 1.6rem;
+}
+
+i{
+  font-weight: bold;
+}
+body{
+  background: linear-gradient(to bottom right, var(--main-color-light), var(--main-color));  
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.form-item{
+  color: black;
+  border: none;
+  font-size: 1.3rem;
+  padding: .5rem;
+  outline: none;
+}
+
+.todo-add{
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.todo-add:hover{
+  color: white !important;
+  background-color: var(--main-color);
+}
+
+.jobs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list{
+  margin: 2rem;
+  min-width: 40%;
+}
+
+.todo-item{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: .5rem;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.todo-name{
+  padding: .5rem;
+  flex: 1;
+}
+
+.todo-button{
+  background-color: var(--accent-color);
+  border: none;
+  font-size: 1.2rem;
+  padding: .5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-button-delete{
+  background-color: black;
+  color: white;
+}
+
+.todo-button-complete{
+  background-color: rgb(3, 179, 3);
+  color: white;
+}
+
+.todo-complete{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.hide{
+  transform: scale(0);
+}
+
+@media only screen and (max-width: 700px) {
+  .todo-name{
+    overflow: hidden;
+    white-space: no-wrap;
+    word-break: break-word;
+    text-overflow: ellipsis;
+  }
+
+  .todo-item{
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  .todo-button{
+    width: 100%;
+  }
+
+  .todo-name{
+    text-align: center;
+  }
+
+  .form-item{
+    width: 40%;
+  }
+
+  .todo-add{
+    width: 20%;
+  }
+
+  .main-title{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
